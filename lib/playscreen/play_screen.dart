@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:add_it/custom_widget/progressbar.dart';
-import 'playscreen_presenter.dart';
+import 'play_screen_presenter.dart';
 import 'dart:async';
 
 class PlayScreen extends StatefulWidget {
@@ -38,8 +38,14 @@ class _PlayScreenState extends State<PlayScreen> with TickerProviderStateMixin i
       });
 
     new Timer(new Duration(seconds: 3), () {
-      startGame();
+      startGame(); //TODO: Fix this memory leak
     });
+  }
+
+  @override
+  void dispose() {
+    _controller.dispose();
+    super.dispose();
   }
 
   void generateSumString() {

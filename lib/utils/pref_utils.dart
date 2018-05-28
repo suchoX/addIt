@@ -12,4 +12,9 @@ class PreferenceUtils{
       await preferences.setInt(HIGH_SCORE_PREFS, score);
     }
   }
+
+  Future getHighScore() async {
+    SharedPreferences preferences = await SharedPreferences.getInstance();
+    return (preferences.getInt(HIGH_SCORE_PREFS) ?? 0);
+  }
 }
