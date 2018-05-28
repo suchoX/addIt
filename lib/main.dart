@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:add_it/playscreen.dart';
+import 'package:add_it/playscreen/playscreen.dart';
 
 void main() => runApp(new MyApp());
 

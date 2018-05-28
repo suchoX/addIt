@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:add_it/custom_widget/progressbar.dart';
-import 'dart:math';
+import 'playscreen_presenter.dart';
 import 'dart:async';
 
 class PlayScreen extends StatefulWidget {
@@ -8,19 +8,20 @@ class PlayScreen extends StatefulWidget {
   State<StatefulWidget> createState() => new _PlayScreenState();
 }
 
-class _PlayScreenState extends State<PlayScreen> with TickerProviderStateMixin {
+class _PlayScreenState extends State<PlayScreen> with TickerProviderStateMixin implements PlayScreenView {
+  PlayScreenPresenter presenter;
+
   AnimationController _controller;
   Animation<double> animation;
   String sumString = "Get Ready!";
-  bool correctAnswer = true;
   int score = 0;
   double progressBarWidth = 0.0;
-  bool gameStarted = false;
   double resetButtonOpacity = 0.0;
 
   @override
   void initState() {
     super.initState();
+    presenter = new PlayScreenPresenter(this);
     _controller = new AnimationController(
       vsync: this,
       duration: new Duration(seconds: 2),
@@ -43,41 +44,15 @@ class _PlayScreenState extends State<PlayScreen> with TickerProviderStateMixin {
 
   void generateSumString() {
     setState(() {
-      int firstNum = generateNumber();
-      int secondNum = generateNumber();
-
-      correctAnswer = new Random().nextBool();
-      int sum;
-      if (correctAnswer) {
-        sum = firstNum + secondNum;
-      } else {
-        sum = generateWrongSum(firstNum, secondNum);
-      }
-      sumString = "" + firstNum.toString() + " + " + secondNum.toString() + " = " + sum.toString();
+      sumString = presenter.generateSumString();
     });
-  }
-
-  int generateWrongSum(int firstNumber, int secondNumber) {
-    Random rand = new Random();
-    bool moreThanActualNumber = rand.nextBool();
-    int difference = min(min(firstNumber, secondNumber) + 1, 5);
-    if (moreThanActualNumber) {
-      return firstNumber + secondNumber + difference;
-    } else {
-      return firstNumber + secondNumber - difference;
-    }
-  }
-
-  int generateNumber() {
-    Random rand = new Random();
-    return rand.nextInt(10);
   }
 
   void startGame() {
     _controller.forward(from: 0.0);
     generateSumString();
+    presenter.gameStarted = true;
     setState(() {
-      gameStarted = true;
       score = 0;
       resetButtonOpacity = 0.0;
     });
@@ -89,9 +64,9 @@ class _PlayScreenState extends State<PlayScreen> with TickerProviderStateMixin {
   }
 
   void yesPressed() {
-    if(gameStarted) {
+    if (presenter.gameStarted) {
       setState(() {
-        if (correctAnswer) {
+        if (presenter.answeredCorrectly(true)) {
           score = score + 1;
           nextQuestion();
         } else {
@@ -102,9 +77,9 @@ class _PlayScreenState extends State<PlayScreen> with TickerProviderStateMixin {
   }
 
   void noPressed() {
-    if(gameStarted) {
+    if (presenter.gameStarted) {
       setState(() {
-        if (correctAnswer) {
+        if (presenter.answeredCorrectly(false)) {
           gameOver("Game Over");
         } else {
           score = score + 1;
@@ -115,6 +90,7 @@ class _PlayScreenState extends State<PlayScreen> with TickerProviderStateMixin {
   }
 
   void gameOver(String message) {
+    presenter.updateHighScoreIfRequired(score);
     setState(() {
       _controller.stop();
       sumString = message;
@@ -144,7 +120,6 @@ class _PlayScreenState extends State<PlayScreen> with TickerProviderStateMixin {
                       sumString,
                       style: new TextStyle(fontSize: 50.0, fontFamily: 'Roboto', color: Colors.lime),
                     )),
-
                 new Container(
                     padding: const EdgeInsets.only(top: 20.0),
                     child: new Row(
@@ -164,20 +139,18 @@ class _PlayScreenState extends State<PlayScreen> with TickerProviderStateMixin {
                         )
                       ],
                     )),
-
                 new Container(
                     padding: const EdgeInsets.only(top: 20.0),
                     child: new Text(
                       score.toString(),
                       style: new TextStyle(fontSize: 80.0, fontFamily: 'Roboto', color: Colors.lime),
                     )),
-
-                new Opacity(opacity: resetButtonOpacity,
+                new Opacity(
+                    opacity: resetButtonOpacity,
                     child: new Container(
                       padding: const EdgeInsets.only(top: 20.0),
                       child: new FlatButton(onPressed: startGame, child: new Text("Reset", style: new TextStyle(fontSize: 25.0, color: Colors.lime))),
-                    )
-                )
+                    ))
               ],
             )
           ],
