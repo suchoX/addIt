@@ -1,6 +1,6 @@
-# add_it
+# AddIt
 
-A new Flutter project.
+A simple addition game built with Flutter
 
 ## Getting Started
 
