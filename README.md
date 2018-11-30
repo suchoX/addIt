@@ -1,6 +1,6 @@
 # AddIt
 
-A simple addition game built with Flutter
+A simple addition game built with Flutter. Jusy answer if the addition displayed is right or wrong within 3 seconds
 
 ## Getting Started
 
