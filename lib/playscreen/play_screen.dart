@@ -1,14 +1,18 @@
-import 'package:flutter/material.dart';
-import 'package:add_it/custom_widget/progressbar.dart';
-import 'play_screen_presenter.dart';
 import 'dart:async';
+
+import 'package:add_it/custom_widget/progressbar.dart';
+import 'package:flutter/material.dart';
+
+import 'play_screen_presenter.dart';
 
 class PlayScreen extends StatefulWidget {
   @override
   State<StatefulWidget> createState() => new _PlayScreenState();
 }
 
-class _PlayScreenState extends State<PlayScreen> with TickerProviderStateMixin implements PlayScreenView {
+class _PlayScreenState extends State<PlayScreen>
+    with TickerProviderStateMixin
+    implements PlayScreenView {
   PlayScreenPresenter presenter;
 
   AnimationController _controller;
@@ -86,10 +90,10 @@ class _PlayScreenState extends State<PlayScreen> with TickerProviderStateMixin i
     if (presenter.gameStarted) {
       setState(() {
         if (presenter.answeredCorrectly(false)) {
-          gameOver("Game Over");
-        } else {
           score = score + 1;
           nextQuestion();
+        } else {
+          gameOver("Game Over");
         }
       });
     }
@@ -115,7 +119,10 @@ class _PlayScreenState extends State<PlayScreen> with TickerProviderStateMixin i
           children: [
             new Positioned(
               top: 0.0,
-              child: new ProgressBar(animation: animation, progressBarWidth: progressBarWidth, progressBarHeight: progressBarHeight),
+              child: new ProgressBar(
+                  animation: animation,
+                  progressBarWidth: progressBarWidth,
+                  progressBarHeight: progressBarHeight),
             ),
             new Column(
               mainAxisAlignment: MainAxisAlignment.center,
@@ -124,7 +131,10 @@ class _PlayScreenState extends State<PlayScreen> with TickerProviderStateMixin i
                     padding: const EdgeInsets.only(top: 20.0),
                     child: new Text(
                       sumString,
-                      style: new TextStyle(fontSize: 50.0, fontFamily: 'Roboto', color: Colors.lime),
+                      style: new TextStyle(
+                          fontSize: 50.0,
+                          fontFamily: 'Roboto',
+                          color: Colors.lime),
                     )),
                 new Container(
                     padding: const EdgeInsets.only(top: 20.0),
@@ -149,13 +159,21 @@ class _PlayScreenState extends State<PlayScreen> with TickerProviderStateMixin i
                     padding: const EdgeInsets.only(top: 20.0),
                     child: new Text(
                       score.toString(),
-                      style: new TextStyle(fontSize: 80.0, fontFamily: 'Roboto', color: Colors.lime),
+                      style: new TextStyle(
+                          fontSize: 80.0,
+                          fontFamily: 'Roboto',
+                          color: Colors.lime),
                     )),
                 new Opacity(
                     opacity: resetButtonOpacity,
                     child: new Container(
                       padding: const EdgeInsets.only(top: 20.0),
-                      child: new FlatButton(onPressed: startGame, child: new Text("Reset", style: new TextStyle(fontSize: 25.0, color: Colors.lime))),
+                      child: new FlatButton(
+                          onPressed:
+                              resetButtonOpacity == 1.0 ? startGame : null,
+                          child: new Text("Reset",
+                              style: new TextStyle(
+                                  fontSize: 25.0, color: Colors.lime))),
                     ))
               ],
             )

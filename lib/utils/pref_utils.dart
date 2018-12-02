@@ -7,7 +7,6 @@ class PreferenceUtils{
   Future setHighScore(int score) async {
     SharedPreferences preferences = await SharedPreferences.getInstance();
     int highScore = (preferences.getInt(HIGH_SCORE_PREFS) ?? 0);
-    print(highScore);
     if(score > highScore) {
       await preferences.setInt(HIGH_SCORE_PREFS, score);
     }
