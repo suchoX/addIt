@@ -1,5 +1,6 @@
-import 'package:add_it/playscreen/play_screen.dart';
 import 'package:add_it/providers/home_provider.dart';
+import 'package:add_it/screens/play_screen.dart';
+import 'package:add_it/views/homescreen/high_score_text.dart';
 import 'package:flutter/material.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -12,8 +13,6 @@ class HomeScreen extends StatelessWidget {
 }
 
 class HomeScreenView extends StatelessWidget {
-  static const SCORE_STRING_CONST = "Your High Score : ";
-
   void howToPlay(BuildContext context) {
     showDialog(
       context: context,
@@ -24,8 +23,7 @@ class HomeScreenView extends StatelessWidget {
           content: new SingleChildScrollView(
             child: new ListBody(
               children: <Widget>[
-                new Text(
-                    "You just have to say if the single digit addition is correct or wrong. Simple"),
+                new Text("You just have to say if the single digit addition is correct or wrong. Simple"),
               ],
             ),
           ),
@@ -44,7 +42,6 @@ class HomeScreenView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    var homeBloc = HomeProvider.of(context);
     return new Scaffold(
         body: new Container(
             color: Color.fromRGBO(44, 62, 80, 1.0),
@@ -54,12 +51,9 @@ class HomeScreenView extends StatelessWidget {
                 children: [
                   new Container(
                       padding: const EdgeInsets.only(bottom: 20.0),
-                      child: new Text("Add-IT",
-                          style: new TextStyle(
-                              fontSize: 100.0, color: Colors.white))),
+                      child: new Text("Add-IT", style: new TextStyle(fontSize: 100.0, color: Colors.white))),
                   new RaisedButton(
-                    child: const Text('Start',
-                        style: const TextStyle(fontSize: 30.0)),
+                    child: const Text('Start', style: const TextStyle(fontSize: 30.0)),
                     color: Color.fromRGBO(46, 204, 113, 1.0),
                     textColor: Color.fromRGBO(255, 255, 255, 1.0),
                     elevation: 4.0,
@@ -67,34 +61,19 @@ class HomeScreenView extends StatelessWidget {
                     onPressed: () {
                       Navigator.push(
                         context,
-                        new MaterialPageRoute(
-                            builder: (context) => new PlayScreen()),
+                        new MaterialPageRoute(builder: (context) => new PlayScreen()),
                       );
                     },
                     padding: const EdgeInsets.fromLTRB(50.0, 20.0, 50.0, 20.0),
                   ),
-                  StreamBuilder(
-                    initialData: homeBloc.loadState(),
-                    stream: homeBloc.highScore,
-                    builder: (content, snapshot) {
-                      int highScore = snapshot.data;
-                      return new Container(
-                        padding: const EdgeInsets.only(top: 20.0),
-                        child: new Text(SCORE_STRING_CONST + "$highScore",
-                            style: new TextStyle(
-                                fontSize: 15.0, color: Colors.white)),
-                      );
-                    },
-                  ),
+                  HighScoreText(),
                   new Container(
                     padding: const EdgeInsets.only(top: 40.0),
                     child: new FlatButton(
                         onPressed: () {
                           howToPlay(context);
                         },
-                        child: new Text("How to Play",
-                            style: new TextStyle(
-                                fontSize: 15.0, color: Colors.white))),
+                        child: new Text("How to Play", style: new TextStyle(fontSize: 15.0, color: Colors.white))),
                   ),
                 ],
               ),
