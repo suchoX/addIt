@@ -1,29 +1,20 @@
-import 'package:flutter/material.dart';
 import 'package:add_it/playscreen/play_screen.dart';
-import 'package:add_it/homescreen/home_screen_presenter.dart';
+import 'package:add_it/providers/home_provider.dart';
+import 'package:flutter/material.dart';
 
-class HomeScreen extends StatefulWidget {
-  HomeScreen({Key key}) : super(key: key);
-
+class HomeScreen extends StatelessWidget {
   @override
-  HomeScreenState createState() => new HomeScreenState();
+  Widget build(BuildContext context) {
+    return HomeProvider(
+      child: HomeScreenView(),
+    );
+  }
 }
 
-class HomeScreenState extends State<HomeScreen> implements HomeScreenView {
+class HomeScreenView extends StatelessWidget {
   static const SCORE_STRING_CONST = "Your High Score : ";
 
-  HomeScreenPresenter presenter;
-
-  String highScoreString = SCORE_STRING_CONST;
-
-  @override
-  void initState() {
-    super.initState();
-    presenter = new HomeScreenPresenter(this);
-    presenter.fetchHighScore();
-  }
-
-  void howToPlay() {
+  void howToPlay(BuildContext context) {
     showDialog(
       context: context,
       barrierDismissible: false, // user must tap button!
@@ -33,7 +24,8 @@ class HomeScreenState extends State<HomeScreen> implements HomeScreenView {
           content: new SingleChildScrollView(
             child: new ListBody(
               children: <Widget>[
-                new Text("You just have to say if the single digit addition is correct or wrong. Simple"),
+                new Text(
+                    "You just have to say if the single digit addition is correct or wrong. Simple"),
               ],
             ),
           ),
@@ -51,14 +43,8 @@ class HomeScreenState extends State<HomeScreen> implements HomeScreenView {
   }
 
   @override
-  void highScoreFetched(int highScore) {
-    setState(() {
-      highScoreString = SCORE_STRING_CONST + "$highScore";
-    });
-  }
-
-  @override
   Widget build(BuildContext context) {
+    var homeBloc = HomeProvider.of(context);
     return new Scaffold(
         body: new Container(
             color: Color.fromRGBO(44, 62, 80, 1.0),
@@ -68,9 +54,12 @@ class HomeScreenState extends State<HomeScreen> implements HomeScreenView {
                 children: [
                   new Container(
                       padding: const EdgeInsets.only(bottom: 20.0),
-                      child: new Text("Add-IT", style: new TextStyle(fontSize: 100.0, color: Colors.white))),
+                      child: new Text("Add-IT",
+                          style: new TextStyle(
+                              fontSize: 100.0, color: Colors.white))),
                   new RaisedButton(
-                    child: const Text('Start', style: const TextStyle(fontSize: 30.0)),
+                    child: const Text('Start',
+                        style: const TextStyle(fontSize: 30.0)),
                     color: Color.fromRGBO(46, 204, 113, 1.0),
                     textColor: Color.fromRGBO(255, 255, 255, 1.0),
                     elevation: 4.0,
@@ -78,19 +67,34 @@ class HomeScreenState extends State<HomeScreen> implements HomeScreenView {
                     onPressed: () {
                       Navigator.push(
                         context,
-                        new MaterialPageRoute(builder: (context) => new PlayScreen()),
+                        new MaterialPageRoute(
+                            builder: (context) => new PlayScreen()),
                       );
                     },
                     padding: const EdgeInsets.fromLTRB(50.0, 20.0, 50.0, 20.0),
                   ),
-                  new Container(
-                    padding: const EdgeInsets.only(top: 20.0),
-                    child: new Text(highScoreString, style: new TextStyle(fontSize: 15.0, color: Colors.white)),
+                  StreamBuilder(
+                    initialData: homeBloc.loadState(),
+                    stream: homeBloc.highScore,
+                    builder: (content, snapshot) {
+                      int highScore = snapshot.data;
+                      return new Container(
+                        padding: const EdgeInsets.only(top: 20.0),
+                        child: new Text(SCORE_STRING_CONST + "$highScore",
+                            style: new TextStyle(
+                                fontSize: 15.0, color: Colors.white)),
+                      );
+                    },
                   ),
                   new Container(
                     padding: const EdgeInsets.only(top: 40.0),
                     child: new FlatButton(
-                        onPressed: howToPlay, child: new Text("How to Play", style: new TextStyle(fontSize: 15.0, color: Colors.white))),
+                        onPressed: () {
+                          howToPlay(context);
+                        },
+                        child: new Text("How to Play",
+                            style: new TextStyle(
+                                fontSize: 15.0, color: Colors.white))),
                   ),
                 ],
               ),
