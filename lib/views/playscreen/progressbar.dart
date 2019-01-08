@@ -21,7 +21,7 @@ class _ProgressBarState extends State<ProgressBar> with TickerProviderStateMixin
     final playBloc = PlayProvider.of(context);
     playBloc.initProgressBarAnimation(_controller);
     return new StreamBuilder(
-        initialData: playBloc.progressBarAnimationValue,
+        initialData: 0.toDouble(),
         stream: playBloc.progressBarAnimationValue,
         builder: (content, snapshot) {
           double progressBarAnimationValue = snapshot.data;

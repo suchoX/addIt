@@ -6,7 +6,7 @@ class ResetButton extends StatelessWidget {
   Widget build(BuildContext context) {
     final playBloc = PlayProvider.of(context);
     return new StreamBuilder(
-        initialData: playBloc.resetButtonOpacity,
+        initialData: 0.toDouble(),
         stream: playBloc.resetButtonOpacity,
         builder: (content, snapshot) {
           double resetButtonOpacity = snapshot.data;

@@ -1,7 +1,7 @@
 import 'dart:async';
 import 'dart:math';
 
-import 'package:add_it/base/base_bloc.dart';
+import 'package:add_it/blocs/base_bloc.dart';
 import 'package:flutter/animation.dart';
 import 'package:rxdart/rxdart.dart';
 
@@ -9,6 +9,8 @@ class PlayBloc extends BaseBloc {
   PlayBloc() {
     initData();
   }
+
+  final String GET_READY = "Get Ready!";
 
   final _resetButtonOpacity = BehaviorSubject<double>();
   final _score = BehaviorSubject<int>();
@@ -39,7 +41,7 @@ class PlayBloc extends BaseBloc {
   void initData() {
     _changeResetButtonOpacity(0.0);
     _changeScore(0);
-    _changeSumString("Get Ready!");
+    _changeSumString(GET_READY);
     _changeProgressBarAnimationValue(0.0);
     new Timer(new Duration(seconds: 3), () {
       startGame(); //TODO: Fix this memory leak

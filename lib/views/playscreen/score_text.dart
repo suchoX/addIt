@@ -6,7 +6,7 @@ class ScoreText extends StatelessWidget {
   Widget build(BuildContext context) {
     final playBloc = PlayProvider.of(context);
     return new StreamBuilder(
-        initialData: playBloc.score,
+        initialData: 0,
         stream: playBloc.score,
         builder: (content, snapshot) {
           int score = snapshot.data;

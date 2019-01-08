@@ -6,7 +6,7 @@ class SumText extends StatelessWidget {
   Widget build(BuildContext context) {
     final playBloc = PlayProvider.of(context);
     return new StreamBuilder(
-        initialData: playBloc.sumString,
+        initialData: playBloc.GET_READY,
         stream: playBloc.sumString,
         builder: (content, snapshot) {
           String sumString = snapshot.data;
