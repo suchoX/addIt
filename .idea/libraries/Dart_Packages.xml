@@ -1,0 +1,564 @@
+<component name="libraryTable">
+  <library name="Dart Packages" type="DartPackagesLibraryType">
+    <properties>
+      <option name="packageNameToDirsMap">
+        <entry key="$sdk">
+          <value>
+            <list>
+              <option value="$PROJECT_DIR$/packages/$sdk" />
+            </list>
+          </value>
+        </entry>
+        <entry key="add_it">
+          <value>
+            <list>
+              <option value="$PROJECT_DIR$/packages/add_it" />
+            </list>
+          </value>
+        </entry>
+        <entry key="analyzer">
+          <value>
+            <list>
+              <option value="$PROJECT_DIR$/packages/analyzer" />
+            </list>
+          </value>
+        </entry>
+        <entry key="archive">
+          <value>
+            <list>
+              <option value="$PROJECT_DIR$/packages/archive" />
+            </list>
+          </value>
+        </entry>
+        <entry key="args">
+          <value>
+            <list>
+              <option value="$PROJECT_DIR$/packages/args" />
+            </list>
+          </value>
+        </entry>
+        <entry key="async">
+          <value>
+            <list>
+              <option value="$PROJECT_DIR$/packages/async" />
+            </list>
+          </value>
+        </entry>
+        <entry key="bazel_worker">
+          <value>
+            <list>
+              <option value="$PROJECT_DIR$/packages/bazel_worker" />
+            </list>
+          </value>
+        </entry>
+        <entry key="build">
+          <value>
+            <list>
+              <option value="$PROJECT_DIR$/packages/build" />
+            </list>
+          </value>
+        </entry>
+        <entry key="build_config">
+          <value>
+            <list>
+              <option value="$PROJECT_DIR$/packages/build_config" />
+            </list>
+          </value>
+        </entry>
+        <entry key="build_daemon">
+          <value>
+            <list>
+              <option value="$PROJECT_DIR$/packages/build_daemon" />
+            </list>
+          </value>
+        </entry>
+        <entry key="build_modules">
+          <value>
+            <list>
+              <option value="$PROJECT_DIR$/packages/build_modules" />
+            </list>
+          </value>
+        </entry>
+        <entry key="build_resolvers">
+          <value>
+            <list>
+              <option value="$PROJECT_DIR$/packages/build_resolvers" />
+            </list>
+          </value>
+        </entry>
+        <entry key="build_runner">
+          <value>
+            <list>
+              <option value="$PROJECT_DIR$/packages/build_runner" />
+            </list>
+          </value>
+        </entry>
+        <entry key="build_runner_core">
+          <value>
+            <list>
+              <option value="$PROJECT_DIR$/packages/build_runner_core" />
+            </list>
+          </value>
+        </entry>
+        <entry key="build_web_compilers">
+          <value>
+            <list>
+              <option value="$PROJECT_DIR$/packages/build_web_compilers" />
+            </list>
+          </value>
+        </entry>
+        <entry key="built_collection">
+          <value>
+            <list>
+              <option value="$PROJECT_DIR$/packages/built_collection" />
+            </list>
+          </value>
+        </entry>
+        <entry key="built_value">
+          <value>
+            <list>
+              <option value="$PROJECT_DIR$/packages/built_value" />
+            </list>
+          </value>
+        </entry>
+        <entry key="charcode">
+          <value>
+            <list>
+              <option value="$PROJECT_DIR$/packages/charcode" />
+            </list>
+          </value>
+        </entry>
+        <entry key="code_builder">
+          <value>
+            <list>
+              <option value="$PROJECT_DIR$/packages/code_builder" />
+            </list>
+          </value>
+        </entry>
+        <entry key="collection">
+          <value>
+            <list>
+              <option value="$PROJECT_DIR$/packages/collection" />
+            </list>
+          </value>
+        </entry>
+        <entry key="convert">
+          <value>
+            <list>
+              <option value="$PROJECT_DIR$/packages/convert" />
+            </list>
+          </value>
+        </entry>
+        <entry key="crypto">
+          <value>
+            <list>
+              <option value="$PROJECT_DIR$/packages/crypto" />
+            </list>
+          </value>
+        </entry>
+        <entry key="csslib">
+          <value>
+            <list>
+              <option value="$PROJECT_DIR$/packages/csslib" />
+            </list>
+          </value>
+        </entry>
+        <entry key="dart_style">
+          <value>
+            <list>
+              <option value="$PROJECT_DIR$/packages/dart_style" />
+            </list>
+          </value>
+        </entry>
+        <entry key="fixnum">
+          <value>
+            <list>
+              <option value="$PROJECT_DIR$/packages/fixnum" />
+            </list>
+          </value>
+        </entry>
+        <entry key="flutter_web">
+          <value>
+            <list>
+              <option value="$PROJECT_DIR$/packages/flutter_web" />
+            </list>
+          </value>
+        </entry>
+        <entry key="flutter_web_ui">
+          <value>
+            <list>
+              <option value="$PROJECT_DIR$/packages/flutter_web_ui" />
+            </list>
+          </value>
+        </entry>
+        <entry key="front_end">
+          <value>
+            <list>
+              <option value="$PROJECT_DIR$/packages/front_end" />
+            </list>
+          </value>
+        </entry>
+        <entry key="glob">
+          <value>
+            <list>
+              <option value="$PROJECT_DIR$/packages/glob" />
+            </list>
+          </value>
+        </entry>
+        <entry key="graphs">
+          <value>
+            <list>
+              <option value="$PROJECT_DIR$/packages/graphs" />
+            </list>
+          </value>
+        </entry>
+        <entry key="html">
+          <value>
+            <list>
+              <option value="$PROJECT_DIR$/packages/html" />
+            </list>
+          </value>
+        </entry>
+        <entry key="http">
+          <value>
+            <list>
+              <option value="$PROJECT_DIR$/packages/http" />
+            </list>
+          </value>
+        </entry>
+        <entry key="http_multi_server">
+          <value>
+            <list>
+              <option value="$PROJECT_DIR$/packages/http_multi_server" />
+            </list>
+          </value>
+        </entry>
+        <entry key="http_parser">
+          <value>
+            <list>
+              <option value="$PROJECT_DIR$/packages/http_parser" />
+            </list>
+          </value>
+        </entry>
+        <entry key="intl">
+          <value>
+            <list>
+              <option value="$PROJECT_DIR$/packages/intl" />
+            </list>
+          </value>
+        </entry>
+        <entry key="io">
+          <value>
+            <list>
+              <option value="$PROJECT_DIR$/packages/io" />
+            </list>
+          </value>
+        </entry>
+        <entry key="js">
+          <value>
+            <list>
+              <option value="$PROJECT_DIR$/packages/js" />
+            </list>
+          </value>
+        </entry>
+        <entry key="json_annotation">
+          <value>
+            <list>
+              <option value="$PROJECT_DIR$/packages/json_annotation" />
+            </list>
+          </value>
+        </entry>
+        <entry key="kernel">
+          <value>
+            <list>
+              <option value="$PROJECT_DIR$/packages/kernel" />
+            </list>
+          </value>
+        </entry>
+        <entry key="logging">
+          <value>
+            <list>
+              <option value="$PROJECT_DIR$/packages/logging" />
+            </list>
+          </value>
+        </entry>
+        <entry key="matcher">
+          <value>
+            <list>
+              <option value="$PROJECT_DIR$/packages/matcher" />
+            </list>
+          </value>
+        </entry>
+        <entry key="meta">
+          <value>
+            <list>
+              <option value="$PROJECT_DIR$/packages/meta" />
+            </list>
+          </value>
+        </entry>
+        <entry key="mime">
+          <value>
+            <list>
+              <option value="$PROJECT_DIR$/packages/mime" />
+            </list>
+          </value>
+        </entry>
+        <entry key="package_config">
+          <value>
+            <list>
+              <option value="$PROJECT_DIR$/packages/package_config" />
+            </list>
+          </value>
+        </entry>
+        <entry key="package_resolver">
+          <value>
+            <list>
+              <option value="$PROJECT_DIR$/packages/package_resolver" />
+            </list>
+          </value>
+        </entry>
+        <entry key="path">
+          <value>
+            <list>
+              <option value="$PROJECT_DIR$/packages/path" />
+            </list>
+          </value>
+        </entry>
+        <entry key="pedantic">
+          <value>
+            <list>
+              <option value="$PROJECT_DIR$/packages/pedantic" />
+            </list>
+          </value>
+        </entry>
+        <entry key="pool">
+          <value>
+            <list>
+              <option value="$PROJECT_DIR$/packages/pool" />
+            </list>
+          </value>
+        </entry>
+        <entry key="protobuf">
+          <value>
+            <list>
+              <option value="$PROJECT_DIR$/packages/protobuf" />
+            </list>
+          </value>
+        </entry>
+        <entry key="pub_semver">
+          <value>
+            <list>
+              <option value="$PROJECT_DIR$/packages/pub_semver" />
+            </list>
+          </value>
+        </entry>
+        <entry key="pubspec_parse">
+          <value>
+            <list>
+              <option value="$PROJECT_DIR$/packages/pubspec_parse" />
+            </list>
+          </value>
+        </entry>
+        <entry key="quiver">
+          <value>
+            <list>
+              <option value="$PROJECT_DIR$/packages/quiver" />
+            </list>
+          </value>
+        </entry>
+        <entry key="rxdart">
+          <value>
+            <list>
+              <option value="$PROJECT_DIR$/packages/rxdart" />
+            </list>
+          </value>
+        </entry>
+        <entry key="scratch_space">
+          <value>
+            <list>
+              <option value="$PROJECT_DIR$/packages/scratch_space" />
+            </list>
+          </value>
+        </entry>
+        <entry key="shelf">
+          <value>
+            <list>
+              <option value="$PROJECT_DIR$/packages/shelf" />
+            </list>
+          </value>
+        </entry>
+        <entry key="shelf_web_socket">
+          <value>
+            <list>
+              <option value="$PROJECT_DIR$/packages/shelf_web_socket" />
+            </list>
+          </value>
+        </entry>
+        <entry key="source_maps">
+          <value>
+            <list>
+              <option value="$PROJECT_DIR$/packages/source_maps" />
+            </list>
+          </value>
+        </entry>
+        <entry key="source_span">
+          <value>
+            <list>
+              <option value="$PROJECT_DIR$/packages/source_span" />
+            </list>
+          </value>
+        </entry>
+        <entry key="stack_trace">
+          <value>
+            <list>
+              <option value="$PROJECT_DIR$/packages/stack_trace" />
+            </list>
+          </value>
+        </entry>
+        <entry key="stream_channel">
+          <value>
+            <list>
+              <option value="$PROJECT_DIR$/packages/stream_channel" />
+            </list>
+          </value>
+        </entry>
+        <entry key="stream_transform">
+          <value>
+            <list>
+              <option value="$PROJECT_DIR$/packages/stream_transform" />
+            </list>
+          </value>
+        </entry>
+        <entry key="string_scanner">
+          <value>
+            <list>
+              <option value="$PROJECT_DIR$/packages/string_scanner" />
+            </list>
+          </value>
+        </entry>
+        <entry key="term_glyph">
+          <value>
+            <list>
+              <option value="$PROJECT_DIR$/packages/term_glyph" />
+            </list>
+          </value>
+        </entry>
+        <entry key="timing">
+          <value>
+            <list>
+              <option value="$PROJECT_DIR$/packages/timing" />
+            </list>
+          </value>
+        </entry>
+        <entry key="typed_data">
+          <value>
+            <list>
+              <option value="$PROJECT_DIR$/packages/typed_data" />
+            </list>
+          </value>
+        </entry>
+        <entry key="vector_math">
+          <value>
+            <list>
+              <option value="$PROJECT_DIR$/packages/vector_math" />
+            </list>
+          </value>
+        </entry>
+        <entry key="watcher">
+          <value>
+            <list>
+              <option value="$PROJECT_DIR$/packages/watcher" />
+            </list>
+          </value>
+        </entry>
+        <entry key="web_socket_channel">
+          <value>
+            <list>
+              <option value="$PROJECT_DIR$/packages/web_socket_channel" />
+            </list>
+          </value>
+        </entry>
+        <entry key="yaml">
+          <value>
+            <list>
+              <option value="$PROJECT_DIR$/packages/yaml" />
+            </list>
+          </value>
+        </entry>
+      </option>
+    </properties>
+    <CLASSES>
+      <root url="file://$PROJECT_DIR$/packages/$sdk" />
+      <root url="file://$PROJECT_DIR$/packages/add_it" />
+      <root url="file://$PROJECT_DIR$/packages/analyzer" />
+      <root url="file://$PROJECT_DIR$/packages/archive" />
+      <root url="file://$PROJECT_DIR$/packages/args" />
+      <root url="file://$PROJECT_DIR$/packages/async" />
+      <root url="file://$PROJECT_DIR$/packages/bazel_worker" />
+      <root url="file://$PROJECT_DIR$/packages/build" />
+      <root url="file://$PROJECT_DIR$/packages/build_config" />
+      <root url="file://$PROJECT_DIR$/packages/build_daemon" />
+      <root url="file://$PROJECT_DIR$/packages/build_modules" />
+      <root url="file://$PROJECT_DIR$/packages/build_resolvers" />
+      <root url="file://$PROJECT_DIR$/packages/build_runner" />
+      <root url="file://$PROJECT_DIR$/packages/build_runner_core" />
+      <root url="file://$PROJECT_DIR$/packages/build_web_compilers" />
+      <root url="file://$PROJECT_DIR$/packages/built_collection" />
+      <root url="file://$PROJECT_DIR$/packages/built_value" />
+      <root url="file://$PROJECT_DIR$/packages/charcode" />
+      <root url="file://$PROJECT_DIR$/packages/code_builder" />
+      <root url="file://$PROJECT_DIR$/packages/collection" />
+      <root url="file://$PROJECT_DIR$/packages/convert" />
+      <root url="file://$PROJECT_DIR$/packages/crypto" />
+      <root url="file://$PROJECT_DIR$/packages/csslib" />
+      <root url="file://$PROJECT_DIR$/packages/dart_style" />
+      <root url="file://$PROJECT_DIR$/packages/fixnum" />
+      <root url="file://$PROJECT_DIR$/packages/flutter_web" />
+      <root url="file://$PROJECT_DIR$/packages/flutter_web_ui" />
+      <root url="file://$PROJECT_DIR$/packages/front_end" />
+      <root url="file://$PROJECT_DIR$/packages/glob" />
+      <root url="file://$PROJECT_DIR$/packages/graphs" />
+      <root url="file://$PROJECT_DIR$/packages/html" />
+      <root url="file://$PROJECT_DIR$/packages/http" />
+      <root url="file://$PROJECT_DIR$/packages/http_multi_server" />
+      <root url="file://$PROJECT_DIR$/packages/http_parser" />
+      <root url="file://$PROJECT_DIR$/packages/intl" />
+      <root url="file://$PROJECT_DIR$/packages/io" />
+      <root url="file://$PROJECT_DIR$/packages/js" />
+      <root url="file://$PROJECT_DIR$/packages/json_annotation" />
+      <root url="file://$PROJECT_DIR$/packages/kernel" />
+      <root url="file://$PROJECT_DIR$/packages/logging" />
+      <root url="file://$PROJECT_DIR$/packages/matcher" />
+      <root url="file://$PROJECT_DIR$/packages/meta" />
+      <root url="file://$PROJECT_DIR$/packages/mime" />
+      <root url="file://$PROJECT_DIR$/packages/package_config" />
+      <root url="file://$PROJECT_DIR$/packages/package_resolver" />
+      <root url="file://$PROJECT_DIR$/packages/path" />
+      <root url="file://$PROJECT_DIR$/packages/pedantic" />
+      <root url="file://$PROJECT_DIR$/packages/pool" />
+      <root url="file://$PROJECT_DIR$/packages/protobuf" />
+      <root url="file://$PROJECT_DIR$/packages/pub_semver" />
+      <root url="file://$PROJECT_DIR$/packages/pubspec_parse" />
+      <root url="file://$PROJECT_DIR$/packages/quiver" />
+      <root url="file://$PROJECT_DIR$/packages/rxdart" />
+      <root url="file://$PROJECT_DIR$/packages/scratch_space" />
+      <root url="file://$PROJECT_DIR$/packages/shelf" />
+      <root url="file://$PROJECT_DIR$/packages/shelf_web_socket" />
+      <root url="file://$PROJECT_DIR$/packages/source_maps" />
+      <root url="file://$PROJECT_DIR$/packages/source_span" />
+      <root url="file://$PROJECT_DIR$/packages/stack_trace" />
+      <root url="file://$PROJECT_DIR$/packages/stream_channel" />
+      <root url="file://$PROJECT_DIR$/packages/stream_transform" />
+      <root url="file://$PROJECT_DIR$/packages/string_scanner" />
+      <root url="file://$PROJECT_DIR$/packages/term_glyph" />
+      <root url="file://$PROJECT_DIR$/packages/timing" />
+      <root url="file://$PROJECT_DIR$/packages/typed_data" />
+      <root url="file://$PROJECT_DIR$/packages/vector_math" />
+      <root url="file://$PROJECT_DIR$/packages/watcher" />
+      <root url="file://$PROJECT_DIR$/packages/web_socket_channel" />
+      <root url="file://$PROJECT_DIR$/packages/yaml" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
