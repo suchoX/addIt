@@ -43,9 +43,6 @@ class PlayBloc extends BaseBloc {
     _changeScore(0);
     _changeSumString(GET_READY);
     _changeProgressBarAnimationValue(0.0);
-    new Timer(new Duration(seconds: 3), () {
-      startGame(); //TODO: Fix this memory leak
-    });
   }
 
   void initProgressBarAnimation(AnimationController controller) {
@@ -163,5 +160,6 @@ class PlayBloc extends BaseBloc {
     _score.close();
     _sumString.close();
     _progressBarAnimationValue.close();
+    _controller.dispose();
   }
 }

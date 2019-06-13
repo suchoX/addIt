@@ -1,3 +1,5 @@
+import 'dart:async';
+
 import 'package:add_it/providers/play_provider.dart';
 import 'package:flutter/material.dart';
 
@@ -20,6 +22,9 @@ class _ProgressBarState extends State<ProgressBar> with TickerProviderStateMixin
     double progressBarHeight = mediaQuery.size.longestSide;
     final playBloc = PlayProvider.of(context);
     playBloc.initProgressBarAnimation(_controller);
+    new Timer(new Duration(seconds: 2), () {
+      playBloc.startGame();
+    });
     return new StreamBuilder(
         initialData: 0.toDouble(),
         stream: playBloc.progressBarAnimationValue,
@@ -33,6 +38,12 @@ class _ProgressBarState extends State<ProgressBar> with TickerProviderStateMixin
             ),
           );
         });
+  }
+
+  @override
+  void dispose() {
+    _controller.dispose();
+    super.dispose();
   }
 }
 
