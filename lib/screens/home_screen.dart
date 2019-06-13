@@ -1,7 +1,6 @@
 import 'package:add_it/providers/home_provider.dart';
 import 'package:add_it/screens/play_screen.dart';
-import 'package:add_it/views/homescreen/high_score_text.dart';
-import 'package:flutter/material.dart';
+import 'package:flutter_web/material.dart';
 
 class HomeScreen extends StatelessWidget {
   @override
@@ -66,7 +65,6 @@ class HomeScreenView extends StatelessWidget {
                     },
                     padding: const EdgeInsets.fromLTRB(50.0, 20.0, 50.0, 20.0),
                   ),
-                  HighScoreText(),
                   new Container(
                     padding: const EdgeInsets.only(top: 40.0),
                     child: new FlatButton(

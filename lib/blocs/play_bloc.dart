@@ -2,7 +2,7 @@ import 'dart:async';
 import 'dart:math';
 
 import 'package:add_it/blocs/base_bloc.dart';
-import 'package:flutter/animation.dart';
+import 'package:flutter_web/animation.dart';
 import 'package:rxdart/rxdart.dart';
 
 class PlayBloc extends BaseBloc {
@@ -113,7 +113,6 @@ class PlayBloc extends BaseBloc {
   }
 
   void updateHighScoreIfRequired() {
-    preferenceUtils.setHighScore(_score.value);
   }
 
   void yesPressed() {

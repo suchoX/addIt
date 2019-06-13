@@ -1,5 +1,5 @@
 import 'package:add_it/blocs/play_bloc.dart';
-import 'package:flutter/material.dart';
+import 'package:flutter_web/material.dart';
 
 class PlayProvider extends InheritedWidget {
   PlayProvider({Key key, Widget child}) : super(key: key, child: child);

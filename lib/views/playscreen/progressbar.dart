@@ -1,7 +1,7 @@
 import 'dart:async';
 
 import 'package:add_it/providers/play_provider.dart';
-import 'package:flutter/material.dart';
+import 'package:flutter_web/material.dart';
 
 class ProgressBar extends StatefulWidget {
   @override
@@ -18,8 +18,8 @@ class _ProgressBarState extends State<ProgressBar> with TickerProviderStateMixin
       duration: new Duration(seconds: 2),
     );
     final mediaQuery = MediaQuery.of(context);
-    double progressBarWidth = mediaQuery.size.shortestSide;
-    double progressBarHeight = mediaQuery.size.longestSide;
+    double progressBarWidth = mediaQuery.size.width;
+    double progressBarHeight = mediaQuery.size.height;
     final playBloc = PlayProvider.of(context);
     playBloc.initProgressBarAnimation(_controller);
     new Timer(new Duration(seconds: 2), () {

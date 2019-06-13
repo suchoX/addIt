@@ -1,5 +1,5 @@
 import 'package:add_it/providers/play_provider.dart';
-import 'package:flutter/material.dart';
+import 'package:flutter_web/material.dart';
 
 class ScoreText extends StatelessWidget {
   @override

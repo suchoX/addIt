@@ -4,7 +4,7 @@ import 'package:add_it/views/playscreen/reset_button.dart';
 import 'package:add_it/views/playscreen/score_text.dart';
 import 'package:add_it/views/playscreen/sum_text.dart';
 import 'package:add_it/views/playscreen/yes_no_container.dart';
-import 'package:flutter/material.dart';
+import 'package:flutter_web/material.dart';
 
 class PlayScreen extends StatelessWidget {
   @override
