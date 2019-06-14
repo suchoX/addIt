@@ -10,6 +10,7 @@ This is the `master` branch, the Mobile version of the application to build andr
 AddIt also has a web version using `flutter-web`. As it is a technical preview, the changes required to migrate you code to web is not smooth. There are some changes that makes it impossible to have the same codebase for the app and web version evn though the changes required are minimal and doesn't affect your business logic and UI components
 
 To checkout the web version try the [web-support](https://github.com/suchoX/addIt/tree/web-support) branch
+<p align="center"><img src="https://github.com/suchoX/addIt/blob/web-support/Art/web-preview.gif" height="200"></p>
 
 ### Tech-Stack
 This project is completely built with flutter and has the following properties
