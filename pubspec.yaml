@@ -1,5 +1,5 @@
 name: add_it
-description: A new Flutter project.
+description: Simple addition game made with Flutter for Mobile and Web using BLOC pattern.
 
 dependencies:
   flutter:
