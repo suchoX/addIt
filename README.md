@@ -7,7 +7,7 @@ for Mobile and Web. But as of March 2020, it's in the dev branch and its easy to
 To get Started with flutter web or add web support to your existing App, [Check here](https://flutter.dev/docs/get-started/web)
 
 <p align="center"><img src="https://github.com/suchoX/addIt/blob/master/Art/preview.gif" height="300"></p>
-<p align="center"><img src="https://github.com/suchoX/addIt/blob/web-support/Art/web-preview.gif" height="200"></p>
+<p align="center"><img src="https://github.com/suchoX/addIt/blob/master/Art/web-preview.gif" height="200"></p>
 
 ### Tech-Stack
 This project is completely built with flutter and has the following properties
