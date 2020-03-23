@@ -2,21 +2,17 @@
 
 A simple addition game built with Flutter. Just answer if the addition displayed is right or wrong within 3 seconds.
 
+Addit was initially built as a android and ios App, and then wne the Web technical preview came out, I added Web support to it. Initially it was a difficult process since It was not possible to have a single Code base
+for Mobile and Web. But as of March 2020, it's in the dev branch and its easy to add web support.
+To get Started with flutter web or add web support to your existing App, [Check here](https://flutter.dev/docs/get-started/web)
+
 <p align="center"><img src="https://github.com/suchoX/addIt/blob/master/Art/preview.gif" height="300"></p>
-
-This is the `master` branch, the Mobile version of the application to build android and ios apps.
-
-
-AddIt also has a web version using `flutter-web`. As it is a technical preview, the changes required to migrate you code to web is not smooth. There are some changes that makes it impossible to have the same codebase for the app and web version evn though the changes required are minimal and doesn't affect your business logic and UI components
-
-To checkout the web version try the [web-support](https://github.com/suchoX/addIt/tree/web-support) branch
 <p align="center"><img src="https://github.com/suchoX/addIt/blob/web-support/Art/web-preview.gif" height="200"></p>
 
 ### Tech-Stack
 This project is completely built with flutter and has the following properties
-1. It follows BLOC pattern. UI components are stateless and StreamBuilder is used to update only the required views
-2. A basic Data Injection procedure has been implemented for injecting objects.
-3. This project showcases a basic Flutter BLOC architecture and can be used as the base of other flutter projects
+1. It follows BLOC pattern using [bloc](https://pub.dev/packages/bloc) and [flutter_bloc](https://pub.dev/packages/flutter_bloc).
+2. This project showcases a basic Flutter BLOC architecture and can be used as the base of other flutter projects
 
 For help getting started with Flutter, view our online
 [documentation](https://flutter.io/).
