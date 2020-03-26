@@ -8,7 +8,6 @@ import 'package:shared_preferences/shared_preferences.dart';
 
 import 'blocs/SimpleBlocDelegate.dart';
 import 'blocs/home/home_bloc.dart';
-import 'blocs/home/home_state.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -32,19 +31,11 @@ void main() async {
 class App extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return BlocBuilder<HomeBloc, HomeState>(
-      builder: (context, homeState) {
-        return MaterialApp(
-          title: 'Add-IT',
-          theme: new ThemeData(
-            primarySwatch: Colors.teal,
-          ),
-          home: BlocProvider(
-            create: (context) => HomeBloc(),
-            child: HomeScreen(),
-          ),
-        );
-      },
-    );
+    return MaterialApp(
+        title: 'Add-IT',
+        theme: new ThemeData(
+          primarySwatch: Colors.teal,
+        ),
+        home: HomeScreen());
   }
 }
